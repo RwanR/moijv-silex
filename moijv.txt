@@ -1,0 +1,9 @@
+Télécharger composer de façon globale
+
+Télécharger le skeleton/silex avec composer en spécifiant le dossier au lieu de path/to/install
+
+Créer un new project avec silex à partir de fichiers existants
+
+Indiquer le index.dev.php comme index file
+
+php bin/console my-command ==> console.php
