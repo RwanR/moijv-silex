@@ -47,6 +47,18 @@ class User implements UserInterface
      */
     private $firstname;
     
+    /**
+     * List of the users roles
+     * @var array
+     */
+    private $roles;
+    
+    /**
+     * The salt used to encode the user's password
+     * @var string
+     */
+    private $salt;
+    
     public function getId() {
         return $this->id;
     }
@@ -100,11 +112,23 @@ class User implements UserInterface
     }
 
     public function getRoles() {
-        
+        return $this->roles;
+    }
+    
+    public function setRoles($roles) {
+        if(is_string($roles)){
+            $roles = explode('|', $roles);
+        }
+        $this->roles = $roles;
+    }
+    
+    public function getSalt() {
+        return $this->salt;
+    }
+    
+    public function setSalt($salt) {
+        $this->salt = $salt;
     }
 
-    public function getSalt() {
-        
-    }
 
 }

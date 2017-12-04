@@ -4,6 +4,7 @@ namespace DAO;
 
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Entity\User;
 /**
  * Description of UserDAO
@@ -17,7 +18,12 @@ class UserDAO extends \SimpleDAO\DAO implements UserProviderInterface
     {
         // SELECT * FROM user WHERE username = ? LIMIT 1
         // bindValue(1, username)
-        return $this->findOne(array('username = ?' => $username))
+        $user = $this->findOne(array('username = ?' => $username));
+        
+        if(! $user){
+            throw new UsernameNotFoundException("User with username $username does not exist");
+        }
+        return $user;
     }
 
     public function refreshUser(UserInterface $user) 
