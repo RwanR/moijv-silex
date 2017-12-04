@@ -48,6 +48,12 @@ class User implements UserInterface
     private $firstname;
     
     /**
+     * User role
+     * @var string
+     */
+    private $role;
+    
+    /**
      * List of the users roles
      * @var array
      */
@@ -111,15 +117,15 @@ class User implements UserInterface
         $this->setPassword(NULL);
     }
 
-    public function getRoles() {
-        return $this->roles;
+    public function getRole() {
+        return $this->role;
+    }
+    public function getRoles(){
+        return explode('|', $this->role);
     }
     
-    public function setRoles($roles) {
-        if(is_string($roles)){
-            $roles = explode('|', $roles);
-        }
-        $this->roles = $roles;
+    public function setRole($role) {
+        $this->role = $role;
     }
     
     public function getSalt() {
@@ -129,6 +135,4 @@ class User implements UserInterface
     public function setSalt($salt) {
         $this->salt = $salt;
     }
-
-
 }

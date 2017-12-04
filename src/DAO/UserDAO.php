@@ -39,5 +39,5 @@ class UserDAO extends \SimpleDAO\DAO implements UserProviderInterface
     {
         return $class === '\Entity\User';
     }
-
+    
 }
