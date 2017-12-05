@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cevantime/SimpleDAO.git",
-                "reference": "bb17ebe8fbbc7be7e43d03242d724838040e642b"
+                "reference": "e33ecb522719a962866322172428ea2f0eeb859f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cevantime/SimpleDAO/zipball/bb17ebe8fbbc7be7e43d03242d724838040e642b",
-                "reference": "bb17ebe8fbbc7be7e43d03242d724838040e642b",
+                "url": "https://api.github.com/repos/Cevantime/SimpleDAO/zipball/e33ecb522719a962866322172428ea2f0eeb859f",
+                "reference": "e33ecb522719a962866322172428ea2f0eeb859f",
                 "shasum": ""
             },
             "require": {
@@ -41,7 +41,7 @@
                 }
             ],
             "description": "A very basic DAO based on PDO",
-            "time": "2017-12-04T07:52:11+00:00"
+            "time": "2017-12-05T13:36:25+00:00"
         },
         {
             "name": "monolog/monolog",
