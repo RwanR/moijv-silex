@@ -62,6 +62,9 @@ $app['twig'] = $app->extend('twig', function ($twig, $app) {
 
     return $twig;
 });
+$app['admins.dao'] = function ($app) {
+    return new \DAO\AdminDAO($app['pdo']);
+};
 $app['users.dao'] = function($app) {
     return new \DAO\UserDAO($app['pdo']);
 };
